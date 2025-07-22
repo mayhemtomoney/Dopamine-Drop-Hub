@@ -21,6 +21,7 @@
           --space-md: 16px;
           --space-lg: 24px;
           --space-xl: 32px;
+          --space-2xl: 48px;
           --radius-lg: 12px;
           --radius-xl: 16px;
           --duration-normal: 0.3s;
@@ -131,17 +132,41 @@
             color: var(--void-black);
             box-shadow: 0 0 20px var(--neon-cyan);
         }
-        footer {
+        .next-step-cta {
+            background: var(--neural-surface);
+            border: 1px solid var(--neon-magenta);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-top: var(--space-2xl);
             text-align: center;
-            margin-top: var(--space-xl);
-            padding-top: var(--space-xl);
-            border-top: 1px solid rgba(0, 255, 255, 0.2);
-            color: var(--dim-text);
+            box-shadow: 0 0 20px rgba(255, 0, 128, 0.2);
         }
-        footer a {
-            color: var(--neon-magenta);
-            text-decoration: none;
+        .next-step-cta h3 {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            color: var(--holo-text);
+            margin: 0 0 var(--space-md) 0;
+        }
+        .next-step-cta p {
+            color: var(--dim-text);
+            margin: 0 0 var(--space-xl) 0;
+            font-size: 1.1rem;
+        }
+        .next-step-cta .cta-btn {
+            font-family: var(--font-mono);
             font-weight: 700;
+            text-transform: uppercase;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+            color: var(--void-black);
+            text-decoration: none;
+            display: inline-block;
+            transition: all var(--duration-normal);
+        }
+        .next-step-cta .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--neon-cyan), 0 0 20px var(--neon-magenta);
         }
     </style>
 </head>
@@ -198,8 +223,10 @@
             </div>
         </main>
 
-        <footer>
-            <p>Enjoying the dopamine? This is just a taste of what's inside the full <a href="#">AI Creator Vault</a>.</p>
+        <footer class="next-step-cta">
+            <h3>Craving more dopamine?</h3>
+            <p>This is just a taste of what's inside the full AI Creator Vault.</p>
+            <a href="https://aicreatorvault.netlify.app/" target="_blank" class="cta-btn">[ UNLOCK THE FULL VAULT ]</a>
         </footer>
     </div>
 </body>
