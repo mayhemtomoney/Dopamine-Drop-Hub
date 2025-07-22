@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creator Vault - The Dopamine Drop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --void-black: #0a0a0a;
+          --neural-surface: #1a1a1a;
+          --neon-cyan: #00FFFF;
+          --neon-magenta: #FF0080;
+          --neural-green: #00FF41;
+          --holo-text: #E0E0FF;
+          --dim-text: rgba(224, 224, 255, 0.6);
+          --font-mono: 'JetBrains Mono', monospace;
+          --font-sans: 'Inter', sans-serif;
+          --space-md: 16px;
+          --space-lg: 24px;
+          --space-xl: 32px;
+          --radius-lg: 12px;
+          --radius-xl: 16px;
+          --duration-normal: 0.3s;
+          --ease-neural: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        body {
+          background-color: var(--void-black);
+          color: var(--holo-text);
+          font-family: var(--font-sans);
+          margin: 0;
+          padding: var(--space-lg);
+          box-sizing: border-box;
+        }
+        .neural-bg {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          overflow: hidden;
+        }
+        .circuit-grid {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+          background-size: 40px 40px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            margin-bottom: var(--space-xl);
+        }
+        header h1 {
+            font-family: var(--font-mono);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--neon-cyan);
+            text-shadow: 0 0 15px var(--neon-cyan);
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--dim-text);
+            margin: var(--space-md) auto 0;
+            max-width: 600px;
+        }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        .tool-card {
+            background: var(--neural-surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-neural);
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+        }
+        .tool-card h2 {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            color: var(--neon-magenta);
+            margin: 0 0 var(--space-md) 0;
+        }
+        .tool-card p {
+            color: var(--dim-text);
+            margin: 0 0 var(--space-xl) 0;
+            flex-grow: 1;
+        }
+        .access-btn {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--neon-cyan);
+            background: transparent;
+            color: var(--neon-cyan);
+            text-decoration: none;
+            transition: all var(--duration-normal);
+        }
+        .access-btn:hover {
+            background: var(--neon-cyan);
+            color: var(--void-black);
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+        footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+            color: var(--dim-text);
+        }
+        footer a {
+            color: var(--neon-magenta);
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="neural-bg">
+        <div class="circuit-grid"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>THE DOPAMINE DROP</h1>
+            <p>Your free toolkit is unlocked. Each tool below is designed to get your brilliant, chaotic brain unstuck and in control.</p>
+        </header>
+
+        <main class="tool-grid">
+            <!-- The Prompt Terminal -->
+            <div class="tool-card">
+                <div class="tool-icon">🧠</div>
+                <h2>The Prompt Terminal</h2>
+                <p>100 copy-paste AI prompts that write like a moody brand strategist so you never stare at a blank screen again.</p>
+                <a href="https://prompt-terminal.netlify.app/" target="_blank" class="access-btn">[ ACCESS PROMPTS ]</a>
+            </div>
+
+            <!-- VibeBoard Generator -->
+            <div class="tool-card">
+                <div class="tool-icon">💅</div>
+                <h2>VibeBoard Generator</h2>
+                <p>An interactive tool to find your brand's unique font and color palette in under 60 seconds.</p>
+                <a href="https://branding-mood-generator.netlify.app/" target="_blank" class="access-btn">[ GENERATE VIBEBOARD ]</a>
+            </div>
+
+            <!-- Aesthetics Lab -->
+            <div class="tool-card">
+                <div class="tool-icon">🎨</div>
+                <h2>The Aesthetics Lab</h2>
+                <p>A mini-game to unlock a vault of Canva templates that make your posts look like you hired a $5k designer.</p>
+                <a href="https://aesthetics-lab.netlify.app/" target="_blank" class="access-btn">[ ENTER LAB ]</a>
+            </div>
+
+            <!-- Content Matrix -->
+            <div class="tool-card">
+                <div class="tool-icon">🔮</div>
+                <h2>The Content Matrix</h2>
+                <p>Generate a 7-day content plan based on your energy levels, then download the full Notion calendar template.</p>
+                <a href="https://content-matrix.netlify.app/" target="_blank" class="access-btn">[ GENERATE PLAN ]</a>
+            </div>
+
+            <!-- Launch Pad -->
+            <div class="tool-card">
+                <div class="tool-icon">📦</div>
+                <h2>The Launch Pad</h2>
+                <p>An interactive checklist for the "oops I made an offer at 2am" moments. Your fast, no-fluff guide to going live.</p>
+                <a href="https://launch-pad-checklist.netlify.app/" target="_blank" class="access-btn">[ OPEN CHECKLIST ]</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>Enjoying the dopamine? This is just a taste of what's inside the full <a href="#">AI Creator Vault</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>
